@@ -8,18 +8,13 @@
  */
 int main(void)
 {
-char lower_c;
+	char c;
 
-for (lower_c = 'a' ; lower_c <= 'z' ; lower_c++)
-{
-putchar(lower_c);
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+	for (c = 'A'; c <= 'Z'; c++)
+		putchar(c);
+		putchar('\n');
 
-char upper_c;
-
-for (upper_c = 'A' ; upper_c <= 'Z' ; upper_c++)
-{
-putchar(upper_c);
-}
-putchar('\n');
-return (0);
+	return (0);
 }
