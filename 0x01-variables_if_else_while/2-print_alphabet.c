@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * Main - Entry point
+ *main - print lowercae a-z
  *
- * Return: Always 0(Success)
+ *Return: Always 0(Success)
  */
 int main(void)
 {
