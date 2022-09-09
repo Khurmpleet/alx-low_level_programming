@@ -2,14 +2,16 @@
 /**
  * Main - Entry point
  *
- * Return: Alwys 0(Success)
+ * Return: Always 0(Success)
  */
 int main(void)
 {
-	char alpha ;
-	
-	for (alpha = 'a'; alpha<= 'z'; alpha++ )
+
+	char alpha;
+
+	for (alpha = 'a'; alpha <= 'z';alpha++)
 		putchar(alpha);
 		putchar('\n');
+
 return (0);
 }
