@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_sting - Reverses a string
+ * rev_string - Reverses a string
  * @s: Char array string type
  */
 
