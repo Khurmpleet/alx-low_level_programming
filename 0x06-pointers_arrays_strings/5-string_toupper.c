@@ -1,18 +1,20 @@
 #include "main.h"
 /**
  * string_toupper - capitalize all letters in string
- * @a: string to manipulate
- * Return: string with all letters capitalized
+ * @n: string to manipulate
+ *
+ * Return: n
  */
-
-char *string_toupper(char *a)
+char *string_toupper(char *n)
 {
 	int i;
 
-	for (i = 0; a[i] != '\0'; i++)
+	i = 0;
+	while (n[i] != '\0')
 	{
-		if (a[i] > 'a' && a[i] <= 'z')
-			a[i] = a[i] - 'a' + 'A';
+		if (n[i] >= 'a' && n[i] <= 'z')
+			n[i] = n[i] - 32;
+		i++;
 	}
-	return (a);
+	return (n);
 }
