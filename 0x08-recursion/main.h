@@ -71,7 +71,7 @@ int is_prime_number(int n);
  * Return: 1 if palindrome, 0 if not
  */
 
-int is_primt(int n, int i);
+int is_prime(int n, int i);
 
 int is_palindrome(char *s);
 
