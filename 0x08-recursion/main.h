@@ -61,7 +61,7 @@ int _sqrt_recursion(int n);
  * Return: 1 if prime, 0 if not
  */
 
-int is_sqrt(int n, int square);
+int is_sqrt(int n, int i);
 
 int is_prime_number(int n);
 
