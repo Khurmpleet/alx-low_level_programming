@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -10,12 +11,15 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	(void) argc;
 
-	for (i = 0; i < argc; i++)
+	if (argv[1] && argv[2])
 	{
-		printf("%s\n", argv[i]);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		return (0);
 	}
+	else
+		printf("Error\n");
 
-	return (0);
+	return (1);
 }
