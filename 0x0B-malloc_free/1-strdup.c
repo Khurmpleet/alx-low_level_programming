@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -30,3 +30,4 @@ char *_strdup(char *str)
 
 	return (a);
 }
+
