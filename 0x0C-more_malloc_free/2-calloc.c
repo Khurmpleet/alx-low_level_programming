@@ -10,17 +10,20 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *p;
-	unsigned int i;
+	void *ptr;
+	unsigned int i; /* match unsigned arguments */
 
-	if (nmemb <= 0 || size <= 0)
+	if (nmemb <= 0 || size <= 0) /* validate input */
 		return (NULL);
 
-	p = malloc(nmemb * size);
-	if (p == NULL)
+	/* allocate memory and check if error */
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i < nmemb; i++)
-		p[i] = 0;
 
-	return (p);
+	/* set allocated memory values to 0 */
+	for (i = 0; i < nmemb * size; i++)
+		*((char *)ptr + i) = 0; /* type cast assigning values*/
+
+	return (ptr);
 }
