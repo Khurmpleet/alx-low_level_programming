@@ -1,9 +1,11 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * count_nodes_till_loop - count nodes to know now many unique nodes to print
- * @head: pointer to head pointer of linked list
- * Return: number of unique nodes in list before a loop
+ * print_listint_safe - print list
+ * @head: head node
+ * Return: amount of nodes in list
  */
 size_t print_listint_safe(const listint_t *head)
 {
