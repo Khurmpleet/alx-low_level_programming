@@ -1,6 +1,5 @@
 #include "main.h"
 
-#include <stdio.h>
 
 /**
  * binary_to_uint - convert a binary number to an unsigned int
@@ -9,32 +8,31 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
+	unsigned int len;
+	unsigned int i;
+	unsigned int j;
+	unsigned int sum;
+	unsigned int pow;
+	int base;
 
-	int len = 0, i;
-	unsigned int sum = 0;
-
+	base = 2;
+	sum = 0;
+	pow = 1;
 	if (b == NULL)
-		return (sum);
-
-	/* find string length */
-	while (b[len] != '\0')
-		len++;
-	len -= 1;
-
-	/* iterate string and if '1' then multiply by power of 2 */
-	/* get power of 2 via binary (e.g. 1<<2 = 100 in binary = 4) */
-	i = 0;
-	while (b[i])
+		return (0);
+	for (len = 0; b[len] != '\0'; len++) /*Getting the length of b num*/
+		;
+	if (len == 1 && (b[0] == '0' || b[0] == '1')) /*Checking single nums*/
+		return ((b[0] - 48));
+	for (i = 0; b[i] != '\0'; i++) /*Iterating through the string*/
 	{
-		if ((b[i] != '0') && (b[i] != '1'))
-			return (sum);
-
-		if (b[i] == '1')
-			sum += (1 * (1 << len));
-		i++;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		for (j = len - 1; j > 0; j--) /*Calculating the exponent*/
+			pow = pow * base;
+		sum = sum + (pow * (b[i] - 48)); /*Adding the number*/
 		len--;
+		pow = 1; /*Reseting the exponent*/
 	}
-
 	return (sum);
 }
-
