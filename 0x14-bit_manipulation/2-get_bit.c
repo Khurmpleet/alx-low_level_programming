@@ -6,13 +6,13 @@
  * @index: The index to look for the number
  * Return: A value at a given index or -1 if an error occours
  */
-int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i;
+	unsigned long int hold;
 
-	if (index > (sizeof(unsigned long int) * 8))
+	if (index > 64)
 		return (-1);
-		for (i = 0; i < index; i++)
-		n = n >> 1;
-	return ((n & 1));
+
+	hold = n >> index;
+
+	return (hold & 1);
 }
